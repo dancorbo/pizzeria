@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap"); /* Importa fuente */
+
+/* Reinicio de márgenes y rellenos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Configuración global */
+html {
+  background-color: #000000; /* Fondo negro */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+/* Tipografía general */
+.font,
+form .submit-button,
+.top {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilo del encabezado */
+header {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: #000000 2px solid; /* Borde negro */
+  box-shadow: 0 0 10px #ff4400a9; /* Sombra */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Navegación */
+.navigator {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 10px;
+}
+
+/* Sección de ejemplos */
+.examples {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Enlaces */
+.link {
+  color: #000000; /* Color negro */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.link:visited {
+  color: #000000; /* Color negro para visitado */
+}
+
+.link:hover {
+  color: #ffffff; /* Color blanco al pasar el cursor */
+}
+
+/* Botón para volver arriba */
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #000000; /* Borde negro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.top:hover {
+  background-color: #ff4500;
+  box-shadow: 0 0 10px #ff4400a9; /* Sombra al pasar el cursor */
+}
+
+/* Lista de imágenes */
+.images-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.images {
+  margin: 20px;
+}
+
+.images img {
+  max-width: 250px;
+  height: 250px;
+  border: 2px #ff4500 solid; /* Borde naranja */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Contenedor de tarjetas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas si es necesario */
+  justify-content: center; /* Alinea las tarjetas horizontalmente en el centro */
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* Título del menú */
+.title-menu {
+  margin: 10px auto;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: #000000 2px solid; /* Borde negro */
+  box-shadow: 0 0 10px #ff4400a9; /* Sombra */
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Elemento destacado */
+.highlighted {
+  border: 5px solid #ff4500; /* Borde naranja */
+  box-shadow: 0 0 10px #ff4400a9; /* Sombra */
+  background-color: #fff7e6; /* Fondo claro */
+  transform: scale(1.02); /* Escala ligera */
+  z-index: 10;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.highlighted:hover {
+  transform: scale(1.1); /* Escala un poco más al hacer hover */
+  z-index: 20; /* Eleva el elemento por encima de los demás */
+  box-shadow: 0 0 30px #ff4400c9; /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilo para cada tarjeta */
+.card {
+  margin: 10px;
+  padding: 10px;
+  width: calc(40% - 20px); /* Ocupa el 50% del contenedor menos el espacio del gap */
+  list-style: none;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: #000000 2px solid; /* Borde negro */
+  border-radius: 20px; /* Bordes redondeados */
+  box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el ancho total */
+}
+
+.icon img {
+  width: 60px;
+  margin: 5px;
+}
+
+/* Sección de pedidos */
+.order {
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: #000000 2px solid; /* Borde negro */
+  box-shadow: 0 0 10px #ff4400a9; /* Sombra */
+  border-radius: 20px; /* Bordes redondeados */
+  width: 200px;
+}
+
+.order textarea,
+.order input {
+  resize: none;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.order input {
+  text-align: center;
+  margin: 5px;
+}
+
+.order .submit-button {
+  padding: 10px;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+  border: #000000 2px solid; /* Borde negro */
+}
+
+.order h3,
+.submit-button {
+  margin: 10px;
+}
+
+/* Opciones de gustos */
+.flavors {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 10px;
+}
+
+.flavors li {
+  margin-bottom: 5px;
+}
+
+.flavors label,
+.order .submit-button {
+  cursor: pointer;
+}
+
+/* Estilo del pie de página */
+.footer {
+  background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+.contact {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+}
+
+/* Formulario de contacto */
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+  resize: none;
+}
+
+.social {
+  padding: 10px 5px;
+}
+
+.social a,
+.social p {
+  margin: 5px;
+  text-decoration: none;
+}
+
+.social i {
+  margin-right: 2px;
+}
+
+.social a,
+.social a:visited {
+  color: #ff4500; /* Color naranja */
+}
+
+.social a:hover {
+  color: #808080; /* Color gris al pasar el cursor */
+}
+
+/* Botón de enviar del formulario */
+.form .submit-button {
+  width: 300px;
+  background-color: #ff4500; /* Fondo naranja */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+}
+
+.form .submit-button:hover,
+.order .submit-button:hover {
+  background-color: #808080; /* Fondo gris al pasar el cursor */
+}
+
+/* Estilo responsivo para dispositivos móviles */
+@media (max-width: 627px) {
+  .card {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor en dispositivos móviles */
+  }
+}

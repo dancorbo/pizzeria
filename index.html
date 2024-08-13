@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" id="top">
+
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de vista -->
+  <link rel="shortcut icon" href="images/pizza-icon.png" type="image/x-icon"> <!-- Ícono de página -->
+  <link rel="stylesheet" href="style.css"> <!-- Estilos -->
+  <script src="https://kit.fontawesome.com/c6b04e4465.js" crossorigin="anonymous"></script>
+  <!-- Íconos de Font Awesome -->
+  <title>Pizza Planet</title> <!-- Título de la página -->
+</head>
+
+<body class="font">
+  <header>
+    <h1>Pizza Planet</h1> <!-- Título principal -->
+    <h2>La mejor pizza directo a tu puerta</h2> <!-- Subtítulo -->
+    <nav>
+      <ul class="navigator">
+        <li><a href="#menu" class="link">Menu</a></li> <!-- Enlace a menú -->
+        <li><a href="#order" class="link">Pedido</a></li> <!-- Enlace a pedidos -->
+        <li><a href="#contact" class="link">Contacto</a></li> <!-- Enlace a contacto -->
+      </ul>
+    </nav>
+  </header>
+
+  <div class="examples">
+    <ul class="images-list">
+      <!-- Imágenes de ejemplos de pizza -->
+      <li class="images"><img class="highlighted" src="images/pepperoni.jpg" alt="Pizza de Pepperoni">
+      </li>
+      <li class="images"><img class="highlighted" src="images/margherita.jpg" alt="Pizza Margherita">
+      </li>
+      <li class="images"><img class="highlighted" src="images/vegetales.jpg" alt="Pizza de Vegetales">
+      </li>
+      <li class="images"><img class="highlighted" src="images/pollo-bbq.jpg" alt="Pizza con Pollo BBQ">
+      </li>
+    </ul>
+  </div>
+
+  <div class="container" id="menu">
+    <h3 class="title-menu">Menú</h3> <!-- Título del menú -->
+    <ul class="card-container">
+      <!-- Lista de pizzas con descripción y precio -->
+      <li class="card highlighted">
+        <h3 class="icon"><img src="images/pepperoni.jpg" alt="Pizza de Pepperoni">Pizza de Pepperoni</h3>
+        <p>Deliciosa pizza con salsa de tomate, queso mozzarella y pepperoni.</p>
+        <p>Precio: $350</p>
+      </li>
+      <li class="card highlighted">
+        <h3 class="icon"><img src="images/margherita.jpg" alt="Pizza Margherita">Pizza Margherita</h3>
+        <p>Pizza tradicional con salsa de tomate, mozzarella fresca, tomate y albahaca.</p>
+        <p>Precio: $300</p>
+      </li>
+      <li class="card highlighted">
+        <h3 class="icon"><img src="images/vegetales.jpg" alt="Pizza de Vegetales">Pizza de Vegetales</h3>
+        <p>Pizza vegetariana con salsa de tomate, mozzarella, champiñones, pimientos y cebolla.</p>
+        <p>Precio: $400</p>
+      </li>
+      <li class="card highlighted">
+        <h3 class="icon"><img src="images/pollo-bbq.jpg" alt="Pizza de pollo con salsa BBQ">Pizza con Pollo BBQ</h3>
+        <p>Pizza con salsa BBQ, pollo a la parrilla, cebolla roja y cilantro.</p>
+        <p>Precio: $700</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="order" id="order">
+    <h3>Realiza tu Pedido</h3> <!-- Título del formulario de pedidos -->
+    <form action="post" method="post">
+      <!-- Campos del formulario para pedidos -->
+      <label for="pizza">Selecciona tu pizza:</label>
+      <select name="pizza" id="pizza">
+        <option value="pepperoni">Pizza de Pepperoni - $350</option>
+        <option value="margherita">Pizza Margherita - $300</option>
+        <option value="vegetales">Pizza de Vegetales - $400</option>
+        <option value="pollo">Pizza con Pollo BBQ - $700</option>
+      </select>
+
+      <label for="quantity">Cantidad:</label>
+      <input type="number" name="quantity" id="quantity" min="1" value="1">
+
+      <label for="customization">Personalización:</label>
+      <textarea name="customization" id="customization" rows="4"
+        placeholder="Ej. sin cebolla, extra queso..."></textarea>
+
+      <h4>Elija sus gustos adicionales:</h4>
+      <ul class="flavors">
+        <!-- Opciones de gustos adicionales -->
+        <li><label><input type="checkbox" name="gusto" value="mozzarella"> Mozzarella</label></li>
+        <li><label><input type="checkbox" name="gusto" value="champiñones"> Champiñones</label></li>
+        <li><label><input type="checkbox" name="gusto" value="salsa_bbq"> Salsa BBQ</label></li>
+        <li><label><input type="checkbox" name="gusto" value="pepperoni"> Pepperoni</label></li>
+        <li><label><input type="checkbox" name="gusto" value="cebolla_roja"> Cebolla Roja</label></li>
+        <li><label><input type="checkbox" name="gusto" value="cebolla_blanca"> Cebolla Blanca</label></li>
+      </ul>
+
+      <label for="name">Nombre:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="address">Dirección:</label>
+      <input type="text" name="address" id="address" required>
+
+      <label for="phone">Teléfono:</label>
+      <input type="tel" name="phone" id="phone" required>
+
+      <input type="submit" value="Enviar Pedido" class="submit-button">
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div id="contact" class="contact">
+      <h3>Contacto</h3> <!-- Sección de contacto -->
+    </div>
+    <div class="footer-content">
+      <div class="form" id="form">
+        <form action="get" method="get"> <!-- Formulario de contacto -->
+          <input type="text" placeholder="Nombre">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <textarea placeholder="Detalle su consulta"></textarea>
+          <input type="submit" value="Enviar" class="submit-button">
+        </form>
+      </div>
+    </div>
+    <div class="social">
+      <!-- Información y enlaces sociales -->
+      <p>Creado por Daniel Corbo - 2024</p>
+      <a href="https://github.com/dancorbo" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+      <a href="https://linkedin.com/in/daniel-corbo225" target="_blank"><i
+          class="fa-brands fa-linkedin"></i>Linkedin</a>
+      <a href="mailto:dancorbo225@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>Email</a>
+    </div>
+  </footer>
+  <a href="#top"><button type="button" class="top">Subir</button></a> <!-- Botón para volver arriba -->
+  <script src="script.js"></script> <!-- Script de JavaScript -->
+</body>
+
+</html>
