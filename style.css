@@ -1,4 +1,4 @@
-/* Importa una fuente de google */
+/* Importa una fuente de Google */
 @import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap");
 
 /* Reinicio de márgenes y rellenos */
@@ -101,7 +101,6 @@ header {
   height: 250px;
   border: 2px #ff4500 solid;
   border-radius: 20px;
-  box-shadow: 0 0 10px #ff4400a9; /* Sombra solo para imágenes */
 }
 
 /* Contenedor de tarjetas */
@@ -127,16 +126,17 @@ header {
 /* Elemento destacado */
 .highlighted {
   border: 5px solid #ff4500;
+  box-shadow: 0 0 10px #ff4400a9;
   background-color: #fff7e6;
   transform: scale(1.02);
   z-index: 10;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlighted:hover {
   transform: scale(1.1);
   z-index: 20;
-  box-shadow: 0 0 30px #ff4400c9; /* Sombra solo para elementos destacados */
+  box-shadow: 0 0 30px #ff4400c9;
 }
 
 /* Estilo para cada tarjeta */
@@ -152,7 +152,12 @@ header {
   box-sizing: border-box;
 }
 
-/* Estilo del formulario de pedidos */
+.icon img {
+  width: 60px;
+  margin: 5px;
+}
+
+/* Sección de pedidos */
 .order {
   margin: 20px auto;
   padding: 10px;
